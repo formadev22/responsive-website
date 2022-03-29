@@ -7,8 +7,8 @@
     --primary-color: rgb(70,72,169);
     --dark-color-text: #222C2A;
     --light-color-text: white;
-    --secondary-color: rgb(186,142,150);
-    --accent-color: rgb(149,120,157);
+    --secondary-color: rgb(22, 235, 250);
+    --accent-color: rgb(180, 230, 237);
     --second-accent-color: rgb(185,141,146);
 }
 
@@ -37,13 +37,13 @@ h1, h2 {
 
 }
 
-a {
+.nav-a {
     text-decoration: none;
-    color: var(--dark-color-text);
+    color: var(--light-color-text);
 }
 
 header {
-    background: white;
+    background: rgba(70,72,169, 0.85);
     width: 100%;
     position: fixed;
     top: 0;
@@ -87,12 +87,12 @@ nav ul a{
 }
 
 nav ul a:hover {
-    background: rgb(235, 235, 235);
+    color: var(--accent-color);
 }
 
 nav ul a:active {
-    /* font-weight: bold; */
-    color: var(--primary-color);
+    font-weight: bold;
+    color: var(--secondary-color);
     position: relative;
 }
 nav ul a:active::before {
@@ -101,13 +101,16 @@ nav ul a:active::before {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     height: .3em;
 }
 .logo {
     font-weight: bold;
-    font-size: 1.125rem;
-    color: var(--primary-color);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    color: var(--secondary-color);
 }
 
 .section-title {
@@ -161,5 +164,5 @@ nav ul a:active::before {
 }
 
 .scroll-up header {
-    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+    filter: drop-shadow(0 -10px 20px rgb(75, 73, 73));
 }
