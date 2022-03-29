@@ -10,6 +10,20 @@
     <title>Raymart Formalejo v-2</title>
 </head>
 <body>
+    <header>
+        <div class="container flex">
+            <a href="#" class="logo">Raymart</a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
     <section class="intro">
         <div class="container">
             <p class="intro__text">Hi! I am</p>
@@ -101,5 +115,33 @@
     <footer>
         <p>&copy;&nbsp;2022&nbsp;Raymart&nbsp;Formalejo.&nbsp;All Rights Reserved</p>
     </footer>
+
+    <script>
+
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset
+
+            if (currentScroll <= 0) {
+                body.classList.remove("scroll-up")
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-up")
+                body.classList.add("scroll-down")
+
+            }
+
+            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-down")
+                body.classList.add("scroll-up")
+
+            }
+
+            lastScroll = currentScroll;
+        })
+    </script>
 </body>
 </html>
