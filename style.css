@@ -4,12 +4,12 @@
 
 :root {
     /* --primary-color: #ECF0FF; */
-    --primary-color: rgb(70,72,169);
+    --primary-color: hsla(215, 50%, 23%, 1);
+    --secondary-color: hsla(203, 39%, 44%, 1);
+    --accent-color: hsla(182, 43%, 76%, 1);
+    --second-accent-color: hsla(355, 78%, 56%, 1);
     --dark-color-text: #222C2A;
     --light-color-text: rgb(255, 255, 255);
-    --secondary-color: rgb(100,255,218);
-    --accent-color: rgb(180, 230, 237);
-    --second-accent-color: rgb(185,141,146);
 }
 
 @font-face {
@@ -54,7 +54,7 @@ h1, h2 {
 }
 
 header {
-    background: rgba(70,72,169, 0.85);
+    background: var(--primary-color);
     width: 100%;
     position: fixed;
     top: 0;
@@ -155,12 +155,16 @@ nav ul a:active {
     background-color: var(--primary-color);
 }
 
+.intro__left {
+    width: 60%;
+}
 
-/* .intro-flex {
+.intro__img {
+    width: 32%;
+}
+.intro-flex {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-} */
+}
 
 .intro__text {
     /* text-transform: uppercase; */
