@@ -10,15 +10,24 @@
     <title>Raymart Formalejo v-2</title>
 </head>
 <body>
+
     <header>
-        <div class="container flex logo__container">
-            <a href="#" class="logo"><img src="img/logo1.svg" alt=""></a>
-            <nav>
-                <ul>
-                    <li><a class="nav-a" href="#" class="active">Home</a></li>
-                    <li><a class="nav-a" href="#about">About</a></li>
-                    <li><a class="nav-a" href="#project">Project</a></li>
-                    <li><a class="nav-a" href="#contact">Contact</a></li>
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo"><span class="logo__r">R</span></a>
+                <ul class="nav-list">
+                    <li class="nav__item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#project" class="nav-link">Project</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
                     
                 </ul>
             </nav>
@@ -126,31 +135,10 @@
 
     <script>
 
-        const body = document.body;
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset
-            // console.log(window.pageYOffset)
-
-            if (currentScroll <= 0) {
-                body.classList.remove("scroll-up")
-            }
-
-            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-                body.classList.remove("scroll-up")
-                body.classList.add("scroll-down")
-
-            }
-
-            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-                body.classList.remove("scroll-down")
-                body.classList.add("scroll-up")
-
-            }
-
-
-            lastScroll = currentScroll;
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
         })
     </script>
 </body>
