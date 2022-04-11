@@ -23,76 +23,12 @@ font-family: 'Playfair Display', serif;
 font-family: 'Roboto', sans-serif;
 */
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
 body {
-min-height: 100vh;
-text-rendering: optimizeSpeed;
-line-height: 1.5;
-margin: 0;
-font-family: 'Roboto', sans-serif;
-font-size: 1.3125rem;
-color: var(--dark-color-text);
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-max-width: 100%;
-display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-html:focus-within {
-    scroll-behavior: auto;
-}
-
-*,
-*::before,
-*::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-}
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+    color: var(--dark-color-text);
 }
 
 img {
@@ -152,17 +88,16 @@ footer p {
 
 .nav{
     width: 100%;
-    height: 5rem;
+    /* height: 10rem; */
     display: flex;
     /* align-items: center; */
     justify-content: space-between;
     transition: height .5s ease;
-    position: relative;
 }
 
 .nav a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.82);
+    color: white;
     display: flex;
     justify-content: space-between;
 }
@@ -182,6 +117,7 @@ footer p {
     font-size: 2.6rem;
     font-weight: 900;
     font-family: myCalibre, serif;
+    z-index: 999;
 }
 
 .logo__r {
@@ -229,30 +165,13 @@ footer p {
     transition: transform .5s ease;
 }
 
-.nav-link:hover::after,
-.nav-link:hover {
+.nav-link:hover::after{
     transform: scaleX(1);
-    color: white;
 }
 
 .scrolling-active{
     background-color: #fff;
     box-shadow: 0 3px 1rem rgba(0,0,0,.1);
-}
-
-.scrolling-active .nav {
-    height: 3.5rem;
-}
-
-.scrolling-active .nav-list {
-    margin: .7rem 0 0 0;
-}
-
-.scrolling-active .nav .logo {
-    margin: 0;
-    position: absolute;
-    top: 3px;
-    left: 0;
 }
 
 .scrolling-active .logo__r {
@@ -314,7 +233,7 @@ footer p {
 }
 
 .intro__sub {
-    color: hsl(214, 15%, 62%);
+    color: var(--light-color-text);
 }
 
 @media (min-width: 800px) {
