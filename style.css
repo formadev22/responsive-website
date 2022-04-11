@@ -4,10 +4,10 @@
 
 :root {
     /* --primary-color: #ECF0FF; */
-    --primary-color: hsla(215, 50%, 23%, 1);
-    --secondary-color: hsla(203, 39%, 44%, 1);
+    --primary-color: #1d3658;
+    --secondary-color: #447a9c;
     --accent-color: hsla(182, 43%, 76%, 1);
-    --second-accent-color: hsla(355, 78%, 56%, 1);
+    --second-accent-color: #e63746;
     --dark-color-text: #222C2A;
     --light-color-text: rgb(255, 255, 255);
 }
@@ -91,6 +91,7 @@ footer p {
 nav ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
 }
 
 nav ul a{
@@ -100,11 +101,11 @@ nav ul a{
 .nav-a:after {
     content: "";
     position: absolute;
-    background-color: var(--secondary-color);
-    height: 3px;
+    background-color: var(--second-accent-color);
+    height: 6px;
     width: 0;
     left: calc((100% - 80%) / 2);
-    bottom: -3px;
+    bottom: -7.5px;
     transition: 0.3s;
 }
 
@@ -112,15 +113,12 @@ nav ul a{
     width: 80%;
 }
 
-nav ul a:hover {
-    color: var(--light-color-text);
-}
-
+nav ul a:hover,
 nav ul a:active {
-    /* font-weight: bold; */
-    color: var(--secondary-color);
+    color: var(--light-color-text);
     position: relative;
 }
+
 /* nav ul a:active::before {
     content: '';
     position: absolute;
@@ -130,14 +128,11 @@ nav ul a:active {
     background: var(--secondary-color);
     height: .3em;
 } */
+
 .logo {
-    font-weight: bolder;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 4px;
-    color: var(--secondary-color);
-    flex-shrink: 0;
+    width: 130px;
+    align-items: center;
+    margin: 1rem 0;
 }
 
 .section-title {
@@ -177,10 +172,12 @@ nav ul a:active {
 .intro__title {
     font-size: clamp(40px, 8vw, 80px);
     margin: 0;
+    line-height: 1;
 }
 
 .intro__sub {
-    color: rgb(145, 154, 182);
+    color: var(--light-color-text);
+    opacity: .5;
 }
 
 @media (min-width: 800px) {
@@ -210,4 +207,84 @@ nav ul a:active {
 
 .scroll-up header {
     filter: drop-shadow(0 -10px 20px rgb(75, 73, 73));
+}
+.contact {
+    color: white;
+    background-color: var(--secondary-color);
+}
+.contact-info {
+    position: relative;
+}
+
+.email {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media {
+    margin: 0;
+    position: absolute;
+    display: flex;
+    list-style-type: none;
+}
+
+.social-icon {
+    color: var(--light-color-text);
+    background: rgba(109, 106, 106, 0.06);
+    font-size: 27px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+}
+
+footer {
+    background: #222C2A;
+    color: var(--light-color-text);
+    padding: 1rem;
+}
+
+.fb:hover {
+    background-color: rgb(42, 42, 240);
+}
+
+.git:hover {
+    background-color: rgb(35, 35, 43);
+}
+
+.twitter:hover {
+    background-color: rgb(59, 163, 232);
+}
+
+.name-box, .email-box, .subject-box, .message-box, .submit-btn-box {
+    display: block;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-bottom: 14px;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    line-height: 1.8;
+}
+
+.message-box {
+    resize: vertical;
+    font-family: inherit;
+}
+
+.submit-btn-box {
+    margin-top: 30px;
+    background-color: var(--second-accent-color);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border-radius: 100px;
+}
+
+.submit-btn-box:hover {
+    opacity: 0.8;
 }
