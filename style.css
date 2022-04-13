@@ -78,7 +78,6 @@ header {
 .col {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
@@ -282,12 +281,13 @@ ul {
 }
 
 .intro__social-icon {
+    font-size: 1.5rem;
     margin: 1em 0 0 0;
     color: rgba(255, 255, 255, 0.628);
 }
 
 .intro__social-icon + .intro__social-icon {
-    margin-left: .5em;
+    margin-left: 1em;
 }
 .intro__fb:active,
 .intro__fb:hover {
@@ -521,6 +521,30 @@ img {
     background-color: #fff;
 }
 
+.project__link {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.project__link-github,
+.project__link-external {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.project__link-external {
+    margin-left: 1rem;
+}
+
+.project__link-github:hover,  
+.project__link-github::after {
+    color: rgb(35, 35, 39);
+}
+.project__link-external:hover,  
+.project__link-external::after {
+    color: var(--second-accent-color);
+}
+
 footer {
     background: #222C2A;
     color: var(--light-color-text);
@@ -584,15 +608,18 @@ footer {
         height: auto;
         position: relative;
         transition: height .5s ease;
+        margin: 0;
     }
 
     .nav__list {
         display: flex;
+        justify-content: flex-end;
         margin: 0;
     }
 
     .row {
-        display: flex;
+        
+        flex-direction: row;
         justify-content: space-between;
         /* align-items: center; */
     }
@@ -604,6 +631,40 @@ footer {
     .nav__list--secondary {
         margin-left: 3em;
     }
+
+    .about__left {
+        width: 62%;
+    }
+
+    .wrapper {
+        width: 32%;
+        align-self: flex-start;
+    }
+
+    .tech__list {
+        grid-template-areas: 
+        'html css sass'
+        'js wp .';
+    }
+
+    .project__1,
+    .project__2,
+    .project__3 {
+        display: flex;
+    }
+
+    .project__thumbnail {
+        width: 40%;
+    }
+    .project__thumbnail img {
+        height: 400px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+    .project__info {
+        width: 55%;
+    }
+    
     /* .nav{
         width: 100%;
         display: flex;
