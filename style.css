@@ -27,7 +27,6 @@ font-family: 'Roboto', sans-serif;
 
 body {
     margin: 0;
-    font-size: 1.3125rem;
     line-height: 1.6;
     color: var(--dark-color-text);
     font-family: 'Roboto', sans-serif;
@@ -344,6 +343,11 @@ ul {
     border-width: 60%;
     
 }
+
+.about__description {
+    margin: 0;
+}
+
 .tech__item-html {
     grid-area: html;
 }
@@ -428,7 +432,10 @@ ul {
 }
 
 img {
-    border-radius: 5px;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 .profile__pic {
@@ -465,6 +472,54 @@ img {
     top: 10px;
     left: 10px;
 } */
+
+.project__title {
+    margin: 0 0 1em 0;
+}
+
+.project__1,
+.project__2,
+.project__3 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 3rem;
+    
+}
+
+.project__info {
+    border: 1px solid #f1f1f1;
+    padding: 3.125rem 3.125rem 2.5rem 1.875rem;
+}
+
+.project__title {
+    text-transform: uppercase;
+}
+
+.tech__title {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: bold;
+    margin: 2rem 0 .8rem 0;
+}
+
+.project__description {
+    margin: 0;
+}
+
+.project__tech-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.project__tech-list > li {
+    padding: 5px 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 14%);
+    display: inline-block;
+    margin: 0 .625rem .625rem 0;
+    font-size: .875rem;
+    background-color: #fff;
+}
 
 footer {
     background: #222C2A;
