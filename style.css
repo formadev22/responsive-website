@@ -319,7 +319,6 @@ ul {
 
 .social-media {
     margin: 0;
-    position: absolute;
     display: flex;
     list-style-type: none;
 }
@@ -553,6 +552,37 @@ footer {
     margin: 0 auto;
 }
 
+.phone__card {
+    display: flex;
+}
+
+.phone__card p,
+.email__card p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.phone__number,
+.email {
+    color: white;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+.email__card {
+    display: flex;
+}
+.contact__row {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contact__form-title {
+    margin: 2rem 0 1rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
 .fb:hover {
     background-color: rgb(42, 42, 240);
 }
@@ -663,6 +693,18 @@ footer {
     }
     .project__info {
         width: 55%;
+    }
+    .contact__row {
+        flex-direction: row;
+    }
+
+.contact__form-title {
+    margin-top: 0;
+}
+
+    .contact__form {
+        flex-direction: row !important;
+        margin-left: 2rem;
     }
     
     /* .nav{
